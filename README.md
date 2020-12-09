@@ -1,5 +1,6 @@
-# COVID-19 County Data API
-A totally free-to-use API for retrieving current and historical COVID-19 data for any county in the United States.
+<p align="middle">
+  <img src="/banner.png" width="100%" />
+</p>
 
 ## The Endpoint
 ### `https://www.plansafe.xyz/api/counties/{county}/{state}`
