@@ -43,8 +43,21 @@ import requests
 url = "https://www.plansafe.xyz/api/counties/"
 county = "harris"
 state = "texas"
+url = url + county + '/' + state
 res = requests.get(url)
-res.json() # should see data in a clean JSON.
+res.json()
 ```
 ### Javascript:
-
+```javascript
+import axios from 'axios'
+...
+const headers = {
+  'Content-Type': 'application/json',
+}
+    
+axios.get(`https://www.plansafe.xyz/api/counties/harris/texas`, { headers: headers})
+.then(res => {
+  const county_data = res.data;
+  console.log(county_data);
+})
+```
