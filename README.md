@@ -5,7 +5,7 @@
 ## The Endpoint (HTTP GET Request)
 ### `https://www.plansafe.xyz/api/counties/{county}/{state}`
 
-###### Note: Provide the full names for county and state. For example, "/harris/texas". Also, when providing the county name, you don't need to provide the word "county" after the name of the county.
+#### Note: Provide the full names for county and state. For example, "/harris/texas". 
 
 ### Optional query parameters for data from a specific day:
 `month (integer)`
