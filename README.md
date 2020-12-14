@@ -36,6 +36,10 @@
 
 **active_cases** Current number of active COVID-19 cases in the county.
 
+## Data Sources
+
+<a href="https://github.com/CSSEGISandData/COVID-19">Johns Hopkins University Center for Systems Science and Engineering</a>
+
 ## Usage Examples
 ### Python:
 ```python
