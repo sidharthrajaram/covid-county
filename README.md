@@ -3,9 +3,9 @@
 </p>
 
 ## The Endpoint (HTTP GET Request)
-### `https://www.plansafe.xyz/api/counties/{county}/{state}`
+### `https://www.plansafe.xyz/api/counties/us/{state}/{county}`
 
-#### Note: Provide the full names for county and state. For example, "/harris/texas". 
+#### Note: Provide the full names for county and state. For example, "/texas/harris". 
 
 ### Optional query parameters for data from a specific day:
 `month (integer)`
@@ -44,10 +44,10 @@
 ### Python:
 ```python
 import requests
-url = "https://www.plansafe.xyz/api/counties/"
+url = "https://www.plansafe.xyz/api/counties/us/"
 county = "harris"
 state = "texas"
-url = url + county + '/' + state
+url = url + state + '/' + county
 res = requests.get(url)
 res.json()
 ```
@@ -59,7 +59,7 @@ const headers = {
   'Content-Type': 'application/json',
 }
     
-axios.get(`https://www.plansafe.xyz/api/counties/harris/texas`, { headers: headers})
+axios.get(`https://www.plansafe.xyz/api/counties/us/texas/harris`, { headers: headers})
 .then(res => {
   const county_data = res.data;
   console.log(county_data);
