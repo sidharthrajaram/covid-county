@@ -3,7 +3,7 @@
 </p>
 
 ## The Endpoint (HTTP GET Request)
-### `https://www.plansafe.xyz/api/v1.0/covid/us/{state}/{county}`
+### `https://www.plansafe.xyz/api/v1.2/covid/us/{state}/{county}`
 
 #### Note: Provide the full names for county and state. For example, "/texas/harris". 
 
@@ -44,7 +44,7 @@
 ### Python:
 ```python
 import requests
-url = "https://www.plansafe.xyz/api/v1.0/covid/us/"
+url = "https://www.plansafe.xyz/api/v1.2/covid/us/"
 county = "harris"
 state = "texas"
 url = url + state + '/' + county
@@ -59,7 +59,7 @@ const headers = {
   'Content-Type': 'application/json',
 }
     
-axios.get(`https://www.plansafe.xyz/api/v1.0/covid/us/texas/harris`, { headers: headers})
+axios.get(`https://www.plansafe.xyz/api/v1.2/covid/us/texas/harris`, { headers: headers})
 .then(res => {
   const county_data = res.data;
   console.log(county_data);
