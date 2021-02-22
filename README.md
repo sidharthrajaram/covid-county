@@ -3,11 +3,15 @@
 </p>
 
 ## The Endpoint (HTTP GET Request)
-### `https://www.plansafe.xyz/api/v1.2/covid/us/{state}/{county}`
+### `https://www.plansafe.xyz/api/v1.2/covid/us`
 
-#### Note: Provide the full names for county and state. For example, "/texas/harris". 
+### Required query parameters::
+`state (string)`
+###### Note: State abbreviations work too! Also, only providing a state will return data for all counties in the state.
 
-### Optional query parameters for data from a specific day:
+### Optional query parameters for data for a specific county/day:
+`county (string)`
+
 `month (integer)`
 
 `day (integer)`
@@ -44,11 +48,9 @@
 ### Python:
 ```python
 import requests
-url = "https://www.plansafe.xyz/api/v1.2/covid/us/"
-county = "harris"
-state = "texas"
-url = url + state + '/' + county
-res = requests.get(url)
+url = "https://www.plansafe.xyz/api/v1.2/covid/us"
+params = {"state":"tx", "county":"harris"}
+res = requests.get(url, params=params)
 res.json()
 ```
 ### Javascript:
@@ -59,7 +61,7 @@ const headers = {
   'Content-Type': 'application/json',
 }
     
-axios.get(`https://www.plansafe.xyz/api/v1.2/covid/us/texas/harris`, { headers: headers})
+axios.get(`https://www.plansafe.xyz/api/v1.2/covid/us`, { headers: headers, params: {'state':'tx','county':'harris'}})
 .then(res => {
   const county_data = res.data;
   console.log(county_data);
